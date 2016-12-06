@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="funciones.js"></script>
+
+<meta charset="utf-8">
+<title>Documento sin ttulo</title>
+    <style>
+
+
+ 
+@keyframes movimiento-carrusel {
+  0% {
+    transform: rotateY(0deg);
+
+  }
+   11.11% {
+    transform: rotateY(-40deg);
+  }
+     22.22% {
+    transform: rotateY(-80deg);
+  }
+     33.33% {
+    transform: rotateY(-120deg);
+  }
+       44.44% {
+    transform: rotateY(-160deg);
+  }
+     55.55% {
+    transform: rotateY(-200deg);
+  }
+       66.66% {
+    transform: rotateY(-240deg);
+  }
+       77.77% {
+    transform: rotateY(-280deg);
+  }
+       88.88% {
+    transform: rotateY(-320deg);
+  }
+       100% {
+    transform: rotateY(0deg);
+  }
+}
+
+    img{
+      width: 172px;
+      height: 116px;
+    }
+        .container {
+            perspective: 1100px;
+        }
+          .container {
+      width: 210px;
+      height: 140px;
+      position: relative;
+      margin: 0 auto 40px;
+      perspective: 1100px;
+    }
+
+        #carousel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+              transform: translateZ( -288px );
+              transform-style: preserve-3d;
+              transition: transform 1s;
+              /*animation: movimiento-carrusel 4s  infinite ; */
+              -webkit-animation-fill-mode: forwards;
+            
+    }
+
+    #carousel figure {
+      display: block;
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      left: 10px;
+      top: 10px;
+      line-height: 116px;
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin: 0;
+      background-size: 169px 111px;
+
+
+    }
+
+ #carousel figure:nth-child(1) {
+              transform: rotateY(   0deg ) translateZ( 288px );
+              background-image: url("imagenes/persimon.jpg");
+    }
+    #carousel figure:nth-child(2) {
+              transform: rotateY(  40deg ) translateZ( 288px );
+              background-image: url("imagenes/maracuya.jpg");
+    }
+    #carousel figure:nth-child(3) {
+              transform: rotateY(  80deg ) translateZ( 288px );
+              background-image: url("imagenes/piña.jpg");
+    }
+    #carousel figure:nth-child(4) {
+              transform: rotateY( 120deg ) translateZ( 288px );
+              background-image: url("imagenes/uva.jpg");
+    }
+    #carousel figure:nth-child(5) {
+              transform: rotateY( 160deg ) translateZ( 288px );
+              background-image: url("imagenes/pera.jpg");
+    }
+    #carousel figure:nth-child(6) {
+              transform: rotateY( 200deg ) translateZ( 288px );
+              background-image: url("imagenes/naranja.jpg");
+    }
+    #carousel figure:nth-child(7) {
+              transform: rotateY( 240deg ) translateZ( 288px );
+              background-image: url("imagenes/tomate.jpg");
+    }
+    #carousel figure:nth-child(8) {
+              transform: rotateY( 280deg ) translateZ( 288px );
+              background-image: url("imagenes/naranja.jpg");
+    }
+    #carousel figure:nth-child(9) {
+              transform: rotateY( 320deg ) translateZ( 288px );
+              background-image: url("imagenes/uva.jpg");
+    }
+
+  body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: sans-serif;
+    max-width: 1425px;
+    background-color: #f3f8e8;
+
+  }
+
+  .menu {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-image: -webkit-gradient(
+     linear,
+     left top,
+     left bottom,
+     color-stop(0, #5DBD6B)
+    );
+  }
+
+
+@media screen and (min-width: 768px) {
+    .menu{
+      display: flex;
+    }
+    li{
+      text-align: center;
+      flex: auto;
+    }
+    a{
+      padding-left: 0;
+      border-right: 1px solid black; 
+
+    }
+}
+
+  a{
+    color: #eee;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 3;
+  }
+   a:hover{
+    color: #ffc23f;
+  }
+
+  li{
+     
+     border-bottom: 1px solid black; 
+      border-right: 1px solid black; 
+      text-align: center;
+    }
+
+    a:last-child{
+      border-right:none;
+     }
+
+
+  .logo{
+    width: 100%;
+    height: 5em;
+    background-color: white;
+    display: flex;
+
+  }
+    #imagenlogo{
+      float: left;
+      background-image: url(imagenes/sprite.png);
+      width: 43px;
+      height: 41px;
+      background-position: -39px -5px;
+  }
+
+  #textologo{
+      width: 300px;
+      height: 100px;
+      float: left;
+  }
+
+  #textologoP{
+    font-size: 2em;
+    color: white;
+    text-shadow: 
+    1px 1px 0px rgb(230,230,230),
+    2px 2px 0px rgb(200,200,200),
+    3px 3px 0px rgb(180,180,180),
+    4px 4px 0px rgb(160,160,160),
+    5px 5px 0px rgb(0,0,0), 8px 8px 20px rgb(0,0,0);
+  }
+  
+
+  #login{
+      width: 200px;
+      height: 5em;
+      float: right;
+      font-family: helvetica;
+  }
+
+
+  #carrito{
+      width: 200px;
+      height: 42px;
+      float: right;
+     align-content: center;
+     display: flex;
+     font-family: helvetica;
+  }
+  #login{
+    width: 200px;
+    height: 42px;
+    float: right;
+    align-content: center;
+    display: flex;
+  }
+
+    #carritoimagen{
+      width: 24px;
+      height: 24px;
+      float: right;
+      align-content: center;
+      background-image: url("imagenes/sprite.png");
+      background-position: -5px -5px;
+  }
+
+      .derecha{
+        width: 50%;
+      float: right;
+
+  }
+
+      .izquierda{
+        width: 50%;
+      float: left;
+  }
+
+  .warper{
+    background-color: white;
+    height: 100%;
+    max-width: 1425px;
+  }
+section.galeria { 
+   -ms-flex-wrap: wrap;
+   -ms-flex-direction: column;
+   -webkit-flex-flow: row wrap; 
+   flex-flow: row wrap; 
+   display: -webkit-box;
+   display: flex;
+   display: -ms-flexbox; /*IE 10*/
+   margin: 5% ;
+}
+section.galeria div { 
+   -webkit-box-flex: auto;
+   -ms-flex: auto;
+   flex: auto; 
+   margin:4px;
+   width: 200px; 
+
+}
+  .marco { 
+  border: 1px solid #5DBD6B;
+
+}
+
+
+section.galeria div img { 
+   width: 100%; 
+     max-width: 223px;
+
+}
+
+section.galeria div div { 
+   width: 100%; 
+
+}
+section.galeria p{
+  width: 100%;
+  color: black;
+  display: inline-block;
+  font-size: 0.9em;
+  text-align: center;
+}
+ /*Media Queries*/
+ @media screen and (max-width: 400px) {
+   section.galeria div { 
+       margin: 0; 
+   }
+   section.galeria { 
+   padding: 0; 
+   }
+}
+
+
+    </style>
+  
+</head>
+
+<body>
+  <div class="warper">
+  <div class="logo">
+    <div class="izquierda">
+      <div id="imagenlogo"></div>
+      <div id="textologo"><p id="textologoP">Fruteria Online</p></div>
+    </div>
+    <div class="derecha">
+      <div id="carritoimagen"></div> 
+      <div id="carrito">CARRITO</div>    
+      <div id="login">IDENTIFICARSE</div>
+    </div>  
+     
+      
+
+  </div>
+  <div id="toggle-menu">
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Servicios</a></li>
+      </ul>
+
+    </nav>
+  </div>
+     </br>
+  <div>
+    <section class="container">
+      <div id="carousel">
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+      </div>
+    </section>
+  </div>
+  <section class="galeria">
+    <div class="marco">
+      <img src="imagenes/pera.jpg" alt="imagen">  
+      <div><p>Pera</p></div>
+      <div><p>6.5€/kg</p></div>
+    </div>
+    <div class="marco">
+        <img src="imagenes/tomate.jpg" alt="imagen">
+        <div><p>Tomate</p></div>
+        <div><p>3€/kg</p></div>
+    </div>
+    <div class="marco"><img src="imagenes/uva.jpg" alt="imagen">
+    		<div><p>Uva</p></div>
+        <div><p>3€/kg</p></div>
+    </div>
+    <div class="marco"><img src="imagenes/piña.png" alt="imagen">
+    			<div><p>Piña</p></div>
+        <div><p>3€/kg</p></div>
+    </div>
+       <div class="marco"><img src="imagenes/persimon.jpg" alt="imagen">
+    			<div><p>Persimon</p></div>
+        <div><p>2.6€/kg</p></div>
+    </div>
+
+      <div class="marco"><img src="imagenes/maracuya.jpg" alt="imagen">
+    			<div><p>Maracuya</p></div>
+        <div><p>4€/kg</p></div>
+    </div>
+</section>
+  </div>
+</body>
+</html>
